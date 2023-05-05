@@ -20,7 +20,7 @@ export const SidebarBgAnim: Variants = {
   },
 };
 
-export const SidebarMenuAnim = {
+export const SidebarMenuAnim: Variants = {
   show: {
     x: 0,
     transition: {
@@ -33,6 +33,23 @@ export const SidebarMenuAnim = {
     transition: {
       duration: 0.2,
       ease: "easeIn",
+    },
+  },
+};
+
+export const DrawPathAnim: Variants = {
+  animate: {
+    pathLength: [0, 1],
+    fillOpacity: [0, 0.1, 0.2, 0.5, 0.8, 1],
+    transition: { duration: 2 },
+  },
+};
+
+export const PathAppearAnim: Variants = {
+  animate: {
+    opacity: [0, 0.38],
+    transition: (custom: number) => {
+      return { duration: 1, delay: custom };
     },
   },
 };
