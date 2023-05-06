@@ -7,10 +7,14 @@ export const PostsContainer = () => {
   const { filterPosts, filteredPosts } = useFilteredPosts();
 
   return (
-    <section className="py-10 md:py-20">
+    <section className="py-10 md:py-16">
       <Container>
         <FilterRow handleFilter={filterPosts} />
-        <motion.div layout className="flex flex-wrap gap-10 justify-center">
+        <motion.div
+          transition={{ when: "afterChildren" }}
+          layout
+          className="flex flex-wrap gap-10 justify-center"
+        >
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
               <PostCard layoutId={post.id} {...post} key={post.id} />
