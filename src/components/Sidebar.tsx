@@ -12,7 +12,7 @@ type Props = {
 export const Sidebar: FC<Props> = ({ show, handleClose, children }) => {
   return (
     <motion.div
-      className="fixed inset-0 bg-slate-950 bg-opacity-30 backdrop-blur-sm"
+      className="fixed inset-0 bg-slate-950 bg-opacity-30 backdrop-blur-sm z-40"
       variants={SidebarBgAnim}
       animate={show ? "show" : "hide"}
       onClick={handleClose}
@@ -20,7 +20,7 @@ export const Sidebar: FC<Props> = ({ show, handleClose, children }) => {
       <motion.aside
         onClick={(e) => e.stopPropagation()}
         variants={SidebarMenuAnim}
-        className="bg-white text-black w-72 dark:bg-slate-800 dark:text-white absolute right-0 h-screen overflow-y-scroll scrollbar-hidden p-2 sm:p-5"
+        className="bg-white z-50 text-black w-72 dark:bg-slate-800 dark:text-white absolute right-0 h-screen overflow-y-scroll scrollbar-hidden p-2 sm:p-5"
       >
         <div className="w-full relative">
           <div
