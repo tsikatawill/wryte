@@ -4,5 +4,8 @@ export * from "./Header.tsx";
 export * from "./Hero.tsx";
 export * from "./Layout.tsx";
 export * from "./Navbar.tsx";
+export * from "./PostCard.tsx";
+export * from "./PostCategoryIcon.tsx";
+export * from "./PostsContainer.tsx";
 export * from "./Sidebar.tsx";
 export * from "./ThemeToggle.tsx";
