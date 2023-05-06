@@ -1,10 +1,11 @@
-import { Container, Header } from "./components";
+import { Container, Header, PostsContainer } from "./components";
 
 function App() {
   return (
     <>
       <Header />
 
+      <PostsContainer />
       <Container>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
