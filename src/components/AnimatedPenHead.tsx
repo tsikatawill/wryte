@@ -1,11 +1,17 @@
 import { DrawPathAnim, PathAppearAnim } from "../lib/animations";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { FC } from "react";
 
-export const AnimatedPenHead = () => {
+type Props = {
+  parentRef: React.RefObject<HTMLElement>;
+};
+
+export const AnimatedPenHead: FC<Props> = ({ parentRef }) => {
   const { scrollYProgress } = useScroll({
+    target: parentRef,
     offset: ["start start", "end center"],
   });
-  const scale = useTransform(scrollYProgress, [0, 1], ["100%", "1%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
   return (
     <motion.svg
       style={{ scale }}
@@ -13,6 +19,7 @@ export const AnimatedPenHead = () => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
+      className="w-64 sm:w-80 md:w-full m-auto"
     >
       <g id="pen">
         <motion.path
