@@ -43,13 +43,15 @@ export const DrawPathAnim: Variants = {
     fillOpacity: [0, 0.1, 0.2, 0.5, 0.8, 1],
     transition: { duration: 2 },
   },
+  animatePath: (custom: number) => ({
+    pathLength: [0, 1],
+    transition: { duration: custom * 1 },
+  }),
 };
 
 export const PathAppearAnim: Variants = {
-  animate: {
+  animate: (custom: number) => ({
     opacity: [0, 0.38],
-    transition: (custom: number) => {
-      return { duration: 1, delay: custom };
-    },
-  },
+    transition: { duration: 1, delay: custom },
+  }),
 };
