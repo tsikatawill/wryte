@@ -7,5 +7,6 @@ export * from "./Navbar.tsx";
 export * from "./PostCard.tsx";
 export * from "./PostCategoryIcon.tsx";
 export * from "./PostsContainer.tsx";
+export * from "./SectionHeader.tsx";
 export * from "./Sidebar.tsx";
 export * from "./ThemeToggle.tsx";
