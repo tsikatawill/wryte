@@ -102,114 +102,114 @@ export const POSTS: postT[] = [
     category: "Frontend",
     title: "Introduction to React",
   },
-  {
-    id: "11",
-    author: "Jessica Zhang",
-    image: "https://picsum.photos/id/55/400",
-    fullText:
-      "Designing for mobile devices requires a unique set of considerations, such as screen size, touch input, and limited bandwidth. In this article, we'll explore some of the best practices for designing mobile interfaces, and discuss how to create engaging and intuitive user experiences on smaller screens.",
-    dateCreated: "2023-05-05",
-    category: "UI/UX",
-    title: "Designing for Mobile Devices",
-  },
-  {
-    id: "21",
-    author: "David Lee",
-    image: "https://picsum.photos/id/38/400",
-    fullText:
-      "JavaScript is a powerful language that can be used for a wide range of applications, including server-side programming, web development, and mobile app development. In this article, we'll explore some of the most useful JavaScript libraries and frameworks, and discuss how they can be used to streamline development and improve code quality.",
-    dateCreated: "2023-05-20",
-    category: "Frontend",
-    title: "Top JavaScript Libraries and Frameworks",
-  },
-  {
-    id: "12",
-    author: "Maggie Wu",
-    image: "https://picsum.photos/id/27/400",
-    fullText:
-      "User experience (UX) design is a critical component of any successful product, and involves understanding users' needs and creating intuitive and engaging interfaces. In this article, we'll explore some of the key principles of UX design, and discuss how they can be applied to create products that users love.",
-    dateCreated: "2023-06-05",
-    category: "UI/UX",
-    title: "Principles of User Experience (UX) Design",
-  },
-  {
-    id: "13",
-    author: "Robert Kim",
-    image: "https://picsum.photos/id/24/400",
-    fullText:
-      "Vue.js is a popular frontend framework that allows developers to build complex user interfaces with ease. In this article, we'll explore some of the key features of Vue.js, and discuss how it can be used to create powerful and scalable applications.",
-    dateCreated: "2023-06-20",
-    category: "Frontend",
-    title: "Introduction to Vue.js",
-  },
-  {
-    id: "14",
-    author: "Julia Chen",
-    image: "https://picsum.photos/id/2/400",
-    fullText:
-      "Product managers play a critical role in the success of any software product, and require a unique set of skills and knowledge. In this article, we'll explore some of the key responsibilities of a product manager, and discuss how to build a successful career in this exciting and dynamic field.",
-    dateCreated: "2023-07-05",
-    category: "Product Management",
-    title: "Becoming a Successful Product Manager",
-  },
-  {
-    id: "15",
-    author: "Julia Chen",
-    image: "https://picsum.photos/id/8/400",
-    fullText:
-      "Product managers play a critical role in the success of any software product, and require a unique set of skills and knowledge. In this article, we'll explore some of the key responsibilities of a product manager, and discuss how to build a successful career in this exciting and dynamic field.",
-    dateCreated: "2023-07-05",
-    category: "Product Management",
-    title: "Becoming a Successful Product Manager",
-  },
-  {
-    id: "16",
-    author: "Michael Brown",
-    image: "https://picsum.photos/id/199/400",
-    fullText:
-      "GraphQL is a query language for APIs that was developed by Facebook, and is now widely used by developers around the world. In this article, we'll explore some of the key concepts in GraphQL, and discuss how it can be used to build powerful and flexible APIs.",
-    dateCreated: "2023-07-20",
-    category: "Backend",
-    title: "Introduction to GraphQL",
-  },
-  {
-    id: "17",
-    author: "Karen Lee",
-    image: "https://picsum.photos/id/231/400",
-    fullText:
-      "Designing accessible interfaces is critical to ensuring that all users can access and use digital products. In this article, we'll explore some of the key principles of accessibility, and discuss how to create interfaces that are inclusive and easy to use for everyone.",
-    dateCreated: "2023-08-05",
-    category: "UI/UX",
-    title: "Designing for Accessibility",
-  },
-  {
-    id: "18",
-    author: "Timothy Lee",
-    image: "https://picsum.photos/id/200/400",
-    fullText:
-      "Node.js is a powerful backend technology that allows developers to build fast and scalable applications with JavaScript. In this article, we'll explore some of the key features of Node.js, and discuss how it can be used to build robust and high-performance APIs.",
-    dateCreated: "2023-08-20",
-    category: "Backend",
-    title: "Introduction to Node.js",
-  },
-  {
-    id: "19",
-    author: "Hannah Kim",
-    image: "https://picsum.photos/id/100/400",
-    fullText:
-      "Angular is a powerful frontend framework that allows developers to build complex and dynamic user interfaces. In this article, we'll explore some of the key features of Angular, and discuss how it can be used to create powerful and scalable applications.",
-    dateCreated: "2023-09-05",
-    category: "Frontend",
-    title: "Introduction to Angular",
-  },
-  {
-    id: "20",
-    author: "Oliver Wang",
-    image: "https://picsum.photos/id/121/400",
-    fullText:
-      "Cryptography is a critical component of modern digital security, and involves the use of mathematical algorithms to secure data and communications. In this article, we'll explore some of the key concepts in cryptography, and discuss how it can be used to protect sensitive information.",
-    dateCreated: "2023-09-20",
-    category: "Backend",
-    title: "Introduction to Cryptography",
-  },
+  // {
+  //   id: "11",
+  //   author: "Jessica Zhang",
+  //   image: "https://picsum.photos/id/55/400",
+  //   fullText:
+  //     "Designing for mobile devices requires a unique set of considerations, such as screen size, touch input, and limited bandwidth. In this article, we'll explore some of the best practices for designing mobile interfaces, and discuss how to create engaging and intuitive user experiences on smaller screens.",
+  //   dateCreated: "2023-05-05",
+  //   category: "UI/UX",
+  //   title: "Designing for Mobile Devices",
+  // },
+  // {
+  //   id: "21",
+  //   author: "David Lee",
+  //   image: "https://picsum.photos/id/38/400",
+  //   fullText:
+  //     "JavaScript is a powerful language that can be used for a wide range of applications, including server-side programming, web development, and mobile app development. In this article, we'll explore some of the most useful JavaScript libraries and frameworks, and discuss how they can be used to streamline development and improve code quality.",
+  //   dateCreated: "2023-05-20",
+  //   category: "Frontend",
+  //   title: "Top JavaScript Libraries and Frameworks",
+  // },
+  // {
+  //   id: "12",
+  //   author: "Maggie Wu",
+  //   image: "https://picsum.photos/id/27/400",
+  //   fullText:
+  //     "User experience (UX) design is a critical component of any successful product, and involves understanding users' needs and creating intuitive and engaging interfaces. In this article, we'll explore some of the key principles of UX design, and discuss how they can be applied to create products that users love.",
+  //   dateCreated: "2023-06-05",
+  //   category: "UI/UX",
+  //   title: "Principles of User Experience (UX) Design",
+  // },
+  // {
+  //   id: "13",
+  //   author: "Robert Kim",
+  //   image: "https://picsum.photos/id/24/400",
+  //   fullText:
+  //     "Vue.js is a popular frontend framework that allows developers to build complex user interfaces with ease. In this article, we'll explore some of the key features of Vue.js, and discuss how it can be used to create powerful and scalable applications.",
+  //   dateCreated: "2023-06-20",
+  //   category: "Frontend",
+  //   title: "Introduction to Vue.js",
+  // },
+  // {
+  //   id: "14",
+  //   author: "Julia Chen",
+  //   image: "https://picsum.photos/id/2/400",
+  //   fullText:
+  //     "Product managers play a critical role in the success of any software product, and require a unique set of skills and knowledge. In this article, we'll explore some of the key responsibilities of a product manager, and discuss how to build a successful career in this exciting and dynamic field.",
+  //   dateCreated: "2023-07-05",
+  //   category: "Product Management",
+  //   title: "Becoming a Successful Product Manager",
+  // },
+  // {
+  //   id: "15",
+  //   author: "Julia Chen",
+  //   image: "https://picsum.photos/id/8/400",
+  //   fullText:
+  //     "Product managers play a critical role in the success of any software product, and require a unique set of skills and knowledge. In this article, we'll explore some of the key responsibilities of a product manager, and discuss how to build a successful career in this exciting and dynamic field.",
+  //   dateCreated: "2023-07-05",
+  //   category: "Product Management",
+  //   title: "Becoming a Successful Product Manager",
+  // },
+  // {
+  //   id: "16",
+  //   author: "Michael Brown",
+  //   image: "https://picsum.photos/id/199/400",
+  //   fullText:
+  //     "GraphQL is a query language for APIs that was developed by Facebook, and is now widely used by developers around the world. In this article, we'll explore some of the key concepts in GraphQL, and discuss how it can be used to build powerful and flexible APIs.",
+  //   dateCreated: "2023-07-20",
+  //   category: "Backend",
+  //   title: "Introduction to GraphQL",
+  // },
+  // {
+  //   id: "17",
+  //   author: "Karen Lee",
+  //   image: "https://picsum.photos/id/231/400",
+  //   fullText:
+  //     "Designing accessible interfaces is critical to ensuring that all users can access and use digital products. In this article, we'll explore some of the key principles of accessibility, and discuss how to create interfaces that are inclusive and easy to use for everyone.",
+  //   dateCreated: "2023-08-05",
+  //   category: "UI/UX",
+  //   title: "Designing for Accessibility",
+  // },
+  // {
+  //   id: "18",
+  //   author: "Timothy Lee",
+  //   image: "https://picsum.photos/id/200/400",
+  //   fullText:
+  //     "Node.js is a powerful backend technology that allows developers to build fast and scalable applications with JavaScript. In this article, we'll explore some of the key features of Node.js, and discuss how it can be used to build robust and high-performance APIs.",
+  //   dateCreated: "2023-08-20",
+  //   category: "Backend",
+  //   title: "Introduction to Node.js",
+  // },
+  // {
+  //   id: "19",
+  //   author: "Hannah Kim",
+  //   image: "https://picsum.photos/id/100/400",
+  //   fullText:
+  //     "Angular is a powerful frontend framework that allows developers to build complex and dynamic user interfaces. In this article, we'll explore some of the key features of Angular, and discuss how it can be used to create powerful and scalable applications.",
+  //   dateCreated: "2023-09-05",
+  //   category: "Frontend",
+  //   title: "Introduction to Angular",
+  // },
+  // {
+  //   id: "20",
+  //   author: "Oliver Wang",
+  //   image: "https://picsum.photos/id/121/400",
+  //   fullText:
+  //     "Cryptography is a critical component of modern digital security, and involves the use of mathematical algorithms to secure data and communications. In this article, we'll explore some of the key concepts in cryptography, and discuss how it can be used to protect sensitive information.",
+  //   dateCreated: "2023-09-20",
+  //   category: "Backend",
+  //   title: "Introduction to Cryptography",
+  // },
 ];
