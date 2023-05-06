@@ -2,7 +2,7 @@ import { postT } from "../types";
 
 export const POSTS: postT[] = [
   {
-    id: "1a,ad2x5",
+    id: "1",
     author: "John Doe",
     image: "https://picsum.photos/id/12/400",
     fullText:
@@ -12,7 +12,7 @@ export const POSTS: postT[] = [
     title: "How to Build Responsive Web Applications with React",
   },
   {
-    id: "2a,ad2x5",
+    id: "2",
     author: "Jane Smith",
     image: "https://picsum.photos/id/18/400",
     fullText:
@@ -23,7 +23,7 @@ export const POSTS: postT[] = [
       "The Rise of Machine Learning and Artificial Intelligence in Product Development",
   },
   {
-    id: "3a,ad2x5",
+    id: "3",
     author: "David Johnson",
     image: "https://picsum.photos/id/32/400",
     fullText:
@@ -33,7 +33,7 @@ export const POSTS: postT[] = [
     title: "Principles of User Interface and User Experience Design",
   },
   {
-    id: "4a,ad2x5",
+    id: "4",
     author: "Mark Williams",
     image: "https://picsum.photos/id/164/400",
     fullText:
@@ -43,7 +43,7 @@ export const POSTS: postT[] = [
     title: "Understanding JavaScript Variables, Functions, and Scope",
   },
   {
-    id: "5a,ad2x5",
+    id: "5",
     author: "Sarah Lee",
     image: "https://picsum.photos/id/20/400",
     fullText:
@@ -53,7 +53,7 @@ export const POSTS: postT[] = [
     title: "Introduction to Backend Development",
   },
   {
-    id: "6a,ad2x5",
+    id: "6",
     author: "Michael Chen",
     image: "https://picsum.photos/id/30/400",
     fullText:
@@ -63,7 +63,7 @@ export const POSTS: postT[] = [
     title: "Introduction to User Research Methodologies",
   },
   {
-    id: "7a,ad2x5",
+    id: "7",
     author: "Emily Brown",
     image: "https://picsum.photos/id/31/400",
     fullText:
@@ -73,7 +73,7 @@ export const POSTS: postT[] = [
     title: "UI/UX Trends to Watch in 2023",
   },
   {
-    id: "8a,ad2x5",
+    id: "8",
     author: "William Davis",
     image: "https://picsum.photos/id/201/400",
     fullText:
@@ -83,7 +83,7 @@ export const POSTS: postT[] = [
     title: "Introduction to Node.js",
   },
   {
-    id: "9a,ad2x5",
+    id: "9",
     author: "Karen Kim",
     image: "https://picsum.photos/id/15/400",
     fullText:
@@ -93,7 +93,7 @@ export const POSTS: postT[] = [
     title: "Best Practices for User Testing",
   },
   {
-    id: "1a0ad2x5",
+    id: "10",
     author: "John Smith",
     image: "https://picsum.photos/id/44/400",
     fullText:
@@ -103,7 +103,7 @@ export const POSTS: postT[] = [
     title: "Introduction to React",
   },
   {
-    id: "1a1ad2x5",
+    id: "11",
     author: "Jessica Zhang",
     image: "https://picsum.photos/id/55/400",
     fullText:
@@ -113,7 +113,7 @@ export const POSTS: postT[] = [
     title: "Designing for Mobile Devices",
   },
   {
-    id: "1a2ad2x5",
+    id: "12",
     author: "David Lee",
     image: "https://picsum.photos/id/38/400",
     fullText:
@@ -123,7 +123,7 @@ export const POSTS: postT[] = [
     title: "Top JavaScript Libraries and Frameworks",
   },
   {
-    id: "1a3ad2x5",
+    id: "12",
     author: "Maggie Wu",
     image: "https://picsum.photos/id/27/400",
     fullText:
@@ -133,7 +133,7 @@ export const POSTS: postT[] = [
     title: "Principles of User Experience (UX) Design",
   },
   {
-    id: "1a4ad2x5",
+    id: "13",
     author: "Robert Kim",
     image: "https://picsum.photos/id/24/400",
     fullText:
@@ -143,7 +143,7 @@ export const POSTS: postT[] = [
     title: "Introduction to Vue.js",
   },
   {
-    id: "1a5ad2x5",
+    id: "14",
     author: "Julia Chen",
     image: "https://picsum.photos/id/2/400",
     fullText:
@@ -153,7 +153,7 @@ export const POSTS: postT[] = [
     title: "Becoming a Successful Product Manager",
   },
   {
-    id: "1a5ad2x5",
+    id: "15",
     author: "Julia Chen",
     image: "https://picsum.photos/id/8/400",
     fullText:
@@ -163,7 +163,7 @@ export const POSTS: postT[] = [
     title: "Becoming a Successful Product Manager",
   },
   {
-    id: "1a6ad2x5",
+    id: "16",
     author: "Michael Brown",
     image: "https://picsum.photos/id/199/400",
     fullText:
@@ -173,7 +173,7 @@ export const POSTS: postT[] = [
     title: "Introduction to GraphQL",
   },
   {
-    id: "1a7ad2x5",
+    id: "17",
     author: "Karen Lee",
     image: "https://picsum.photos/id/231/400",
     fullText:
@@ -183,7 +183,7 @@ export const POSTS: postT[] = [
     title: "Designing for Accessibility",
   },
   {
-    id: "1a8ad2x5",
+    id: "18",
     author: "Timothy Lee",
     image: "https://picsum.photos/id/200/400",
     fullText:
@@ -193,7 +193,7 @@ export const POSTS: postT[] = [
     title: "Introduction to Node.js",
   },
   {
-    id: "1a9ad2x5",
+    id: "19",
     author: "Hannah Kim",
     image: "https://picsum.photos/id/100/400",
     fullText:
@@ -203,7 +203,7 @@ export const POSTS: postT[] = [
     title: "Introduction to Angular",
   },
   {
-    id: "2a0ad2x5",
+    id: "20",
     author: "Oliver Wang",
     image: "https://picsum.photos/id/121/400",
     fullText:
