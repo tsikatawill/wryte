@@ -30,3 +30,8 @@ export type filterFormDataT = {
 
 export type filterByT = "author" | "category" | "title";
 export type filterValueT = string | postCategoryT;
+
+export type filterFncT = (
+  filterBy: filterByT,
+  filterValue: filterValueT
+) => void;
