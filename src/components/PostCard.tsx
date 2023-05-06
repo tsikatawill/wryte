@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { PostCategoryIcon } from ".";
 import { postT } from "../types";
 
-export const PostCard: FC<postT & MotionProps> = ({
+type Props = postT & MotionProps;
+
+export const PostCard: FC<Props> = ({
   title,
   author,
   category,

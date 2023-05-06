@@ -1,11 +1,11 @@
-import { filterByT, filterValueT, postCategoryT, postT } from "../types";
+import { filterFncT, postCategoryT, postT } from "../types";
 import { POSTS } from "../lib/posts";
 import { useState } from "react";
 
 export const useFilteredPosts = () => {
   const [filteredPosts, setFilteredPosts] = useState<postT[]>(POSTS);
 
-  const filterPosts = (filterBy: filterByT, filterValue: filterValueT) => {
+  const filterPosts: filterFncT = (filterBy, filterValue) => {
     if (filterBy === "category") {
       if (filterValue === "All") {
         setFilteredPosts(POSTS);
