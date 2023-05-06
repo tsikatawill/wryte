@@ -113,7 +113,7 @@ export const POSTS: postT[] = [
     title: "Designing for Mobile Devices",
   },
   {
-    id: "12",
+    id: "21",
     author: "David Lee",
     image: "https://picsum.photos/id/38/400",
     fullText:
