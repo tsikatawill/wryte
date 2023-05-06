@@ -21,10 +21,10 @@ export const PostCard: FC<Props> = ({
         opacity: [0, 1],
         transition: { duration: 0.5, ease: "easeOut" },
       }}
-      className="post-card bg-white shadow-md shadow-[rgba(0,0,0,0.25)] dark:bg-slate-700 dark:text-white w-[23rem]"
+      className="post-card bg-white shadow-md shadow-[rgba(0,0,0,0.25)] dark:bg-slate-700 dark:text-white w-full sm:w-[21rem] lg:w-[23rem]"
       {...rest}
     >
-      <div className="image-wrapper w-[23rem] h-80 overflow-hidden">
+      <div className="image-wrapper w-full sm:w-[21rem] lg:w-[23rem] sm:h-[21rem] lg:h-[23rem] overflow-hidden">
         <motion.img
           whileHover={{
             scale: 1.2,
@@ -36,15 +36,15 @@ export const PostCard: FC<Props> = ({
         />
       </div>
 
-      <div className="text-content grid place-content-center h-60 relative px-5">
+      <div className="text-content grid place-content-center h-60 relative px-2 sm:px-5">
         <div className="absolute -top-5 left-1/2 -translate-x-1/2">
           <PostCategoryIcon category={category} />
         </div>
 
-        <div className="space-y-5 text-center">
+        <div className="space-y-2 sm:space-y-5 text-center">
           <p className="text-slate-600 dark:text-slate-200">{author}</p>
 
-          <h3 className="font-bold capitalize text-3xl text-black dark:text-slate-100 line-clamp-3">
+          <h3 className="font-bold capitalize text-2xl sm:text-3xl text-black dark:text-slate-100 line-clamp-3">
             <Link to={`/posts/${title}`}>{title}</Link>
           </h3>
 
