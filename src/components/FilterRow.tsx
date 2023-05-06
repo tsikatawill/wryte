@@ -21,8 +21,6 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
 
   const AUTHORS = POSTS.map((item) => item.author);
 
-  const [showAuthors, setShowAuthors] = useState<boolean>(false);
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };

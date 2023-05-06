@@ -2,7 +2,7 @@ import { Container, Sidebar, ThemeToggle } from ".";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Logo from "/images/wryte-light.svg";
-import { ROUTES } from "../lib/ROUTES";
+import { ROUTES } from "../lib/routes";
 import { useState } from "react";
 
 export const Navbar = () => {
