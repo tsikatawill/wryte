@@ -18,6 +18,8 @@ export const AnimatedPenHead = () => {
         <motion.path
           variants={DrawPathAnim}
           animate="animate"
+          whileHover="animatePath"
+          custom={1.5}
           id="pen_top"
           data-name="pen top"
           d="M158,81.76l-45.63,94.1H87.63L42,81.76C73.36,65,90.73,25.83,97.13,8.5V109.56a8.82,8.82,0,1,0,5.72,0V8.5C109.25,25.83,126.61,65,158,81.76Z"
@@ -25,6 +27,8 @@ export const AnimatedPenHead = () => {
         />
         <motion.rect
           variants={DrawPathAnim}
+          whileHover="animatePath"
+          custom={2}
           animate="animate"
           id="ferule"
           x="87.24"
