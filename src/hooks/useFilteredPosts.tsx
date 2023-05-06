@@ -24,6 +24,8 @@ export const useFilteredPosts = () => {
             .includes(String(filterValue).toLowerCase())
         )
       );
+    } else {
+      setFilteredPosts(POSTS);
     }
   };
 
