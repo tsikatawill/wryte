@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useEffect, useState } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import {
   filterByT,
   filterFormDataT,
@@ -18,16 +18,13 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
     title: "",
   };
   const [formData, setFormData] = useState<filterFormDataT>(emptyFormData);
+  const [showAuthors, setShowAuthors] = useState<boolean>(false);
 
   const AUTHORS = POSTS.map((item) => item.author);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
-
-  useEffect(() => {
-    console.log({ AUTHORS });
-  }, [AUTHORS]);
 
   return (
     <div className="mb-10">
@@ -67,15 +64,20 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
             value={formData.author}
             onChange={(e: ChangeEvent<HTMLInputElement>) => {
               setFormData({ ...formData, author: e.target.value });
-              handleFilter("author", e.target.value);
+              if (e.target.value.trim().length > 2) {
+                setShowAuthors(true);
+                handleFilter("author", e.target.value);
+              } else {
+                handleFilter("author", "");
+                setShowAuthors(false);
+              }
             }}
             className="block outline-blue-500 focus:outline border-none w-full dark:bg-slate-950 bg-slate-200 px-2 h-10"
             placeholder="Search by author"
           />
           <datalist id="author-list">
-            {AUTHORS.map((author) => (
-              <option value={author}>{author}</option>
-            ))}
+            {showAuthors &&
+              AUTHORS.map((author) => <option value={author}>{author}</option>)}
           </datalist>
         </div>
 
@@ -92,7 +94,9 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
                 ...formData,
                 title: e.target.value,
               });
-              handleFilter("title", e.target.value);
+              if (e.target.value.trim().length > 2) {
+                handleFilter("title", e.target.value);
+              }
             }}
             placeholder="Search by title"
             className="block outline-blue-500 focus:outline border-none w-full dark:bg-slate-950 bg-slate-200 px-2 h-10"
