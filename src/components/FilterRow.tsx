@@ -28,7 +28,10 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
 
   return (
     <div className="mb-10">
-      <form className="grid grid-cols-3 gap-5" onSubmit={handleSubmit}>
+      <form
+        className="grid md:grid-cols-3 gap-2 md:gap-5 max-w-sm md:max-w-full mx-auto"
+        onSubmit={handleSubmit}
+      >
         <div className="input-group">
           <label htmlFor="category" className="font-semibold mb-2 block">
             Category
