@@ -23,7 +23,15 @@ export const PostCard: FC<postT & MotionProps> = ({
       {...rest}
     >
       <div className="image-wrapper w-[23rem] h-80 overflow-hidden">
-        <img className="w-full h-full object-cover" src={image} alt="title" />
+        <motion.img
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          className="w-full h-full object-cover"
+          src={image}
+          alt={title}
+        />
       </div>
 
       <div className="text-content grid place-content-center h-60 relative px-5">
