@@ -21,10 +21,10 @@ export const PostCard: FC<Props> = ({
         opacity: [0, 1],
         transition: { duration: 0.5, ease: "easeOut" },
       }}
-      className="post-card bg-white shadow-md shadow-[rgba(0,0,0,0.25)] dark:bg-slate-700 dark:text-white w-full sm:w-[21rem] lg:w-[23rem]"
+      className="post-card bg-white shadow-md shadow-[rgba(0,0,0,0.25)] dark:bg-slate-700 dark:text-white w-full md:w-[21rem] lg:w-[23rem] max-w-sm"
       {...rest}
     >
-      <div className="image-wrapper w-full sm:w-[21rem] lg:w-[23rem] sm:h-[21rem] lg:h-[23rem] overflow-hidden">
+      <div className="image-wrapper max-w-sm w-full md:w-[21rem] lg:w-[23rem] sm:h-[21rem] lg:h-[23rem] overflow-hidden">
         <motion.img
           whileHover={{
             scale: 1.2,
