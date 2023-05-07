@@ -23,8 +23,8 @@ export const Navbar = () => {
                 title={name}
                 className={({ isActive }) => {
                   return isActive
-                    ? `border-b border-black font-bold  dark:border-white hover:bg-slate-950 p-2 duration-300`
-                    : `hover:bg-slate-950 hover:bg-opacity-40 font-semibold hover:border-white border-b border-transparent p-2 duration-300`;
+                    ? `border-b border-black font-bold  dark:border-white dark:hover:bg-slate-950 hover:bg-slate-300 p-2 duration-300`
+                    : `dark:hover:bg-slate-950 hover:bg-opacity-40 font-semibold hover:bg-slate-200 border-transparent p-2 duration-300`;
                 }}
               >
                 {name}
@@ -54,7 +54,7 @@ export const Navbar = () => {
               title={name}
               className={({ isActive }) => {
                 return isActive
-                  ? `border-l border-white font-bold hover:bg-slate-900 p-2 hover:pl-3 duration-300`
+                  ? `border-l border-white font-bold dark:hover:bg-slate-900 bg-slate-200 dark:bg-slate-900  hover:bg-slate-300 p-2 hover:pl-3 duration-300`
                   : `dark:hover:bg-slate-900 font-semibold hover:bg-slate-200 p-2 hover:pl-3 duration-300`;
               }}
             >
