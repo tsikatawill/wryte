@@ -1,0 +1,23 @@
+.quill {
+  @apply shadow-lg shadow-[rgba(0,0,0,0.25)];
+
+  img {
+    @apply w-full;
+  }
+
+  .ql-error .ql-toolbar {
+    @apply bg-red-600 bg-opacity-30;
+  }
+
+  .ql-error .ql-container {
+    @apply border border-red-500;
+  }
+
+  .ql-toolbar {
+    @apply bg-white;
+  }
+
+  .ql-container {
+    @apply bg-slate-200 dark:bg-slate-950 dark:text-white text-lg min-h-[300px] text-black;
+  }
+}
