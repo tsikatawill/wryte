@@ -5,6 +5,7 @@ import {
   filterValueT,
   postCategoryT,
 } from "../types";
+import { POSTCATEGORIES } from "../lib/postCategories";
 import { POSTS } from "../lib/posts";
 
 type Props = {
@@ -47,13 +48,13 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
               });
               handleFilter("category", e.target.value);
             }}
-            className="block outline-blue-500 focus:outline border-none w-full dark:bg-slate-950 bg-slate-200 px-2 h-10"
+            className="input"
           >
-            {["All", "Backend", "Frontend", "Product Management", "UI/UX"].map(
-              (cat) => (
-                <option value={cat}>{cat}</option>
-              )
-            )}
+            {["All", ...POSTCATEGORIES].map((cat) => (
+              <option value={cat} key={cat}>
+                {cat}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -75,12 +76,16 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
                 setShowAuthors(false);
               }
             }}
-            className="block outline-blue-500 focus:outline border-none w-full dark:bg-slate-950 bg-slate-200 px-2 h-10"
+            className="input"
             placeholder="Search by author"
           />
           <datalist id="author-list">
             {showAuthors &&
-              AUTHORS.map((author) => <option value={author}>{author}</option>)}
+              AUTHORS.map((author, idx) => (
+                <option key={idx} value={author}>
+                  {author}
+                </option>
+              ))}
           </datalist>
         </div>
 
@@ -102,7 +107,7 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
               }
             }}
             placeholder="Search by title"
-            className="block outline-blue-500 focus:outline border-none w-full dark:bg-slate-950 bg-slate-200 px-2 h-10"
+            className="input"
           />
         </div>
       </form>
