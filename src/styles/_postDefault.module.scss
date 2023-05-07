@@ -6,32 +6,39 @@
   h5,
   h6 {
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   h1 {
     font-size: 36px;
+    line-height: 45px;
+    text-align: center;
   }
 
   h2 {
     font-size: 32px;
+    line-height: 40px;
   }
 
   h3 {
     font-size: 28px;
+    line-height: 35px;
   }
 
   h4 {
     font-size: 24px;
+    line-height: 29px;
   }
 
   h5 {
     font-size: 20px;
+    line-height: 26px;
   }
 
   h6 {
     font-size: 16px;
+    line-height: 20px;
   }
 
   p {
@@ -46,6 +53,14 @@
 
   a:hover {
     text-decoration: underline;
+  }
+
+  ul {
+    list-style: circle;
+  }
+
+  ol {
+    list-style: decimal;
   }
 
   ul,
@@ -126,5 +141,10 @@
     margin-top: 40px;
     text-align: center;
     color: #6c757d;
+  }
+
+  .ql-align-center {
+    text-align: center;
+    display: none;
   }
 }
