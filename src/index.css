@@ -4,15 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply dark:bg-slate-900 dark:text-white bg-slate-50;
-  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+@layer components {
+  .input {
+    @apply block outline-blue-500 focus:outline border-none w-full dark:bg-slate-950 bg-slate-200 px-2 h-10;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: 0;
+  }
 }
 
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-hidden {
-  scrollbar-width: 0;
+@layer base {
+  body {
+    @apply dark:bg-slate-900 dark:text-white bg-slate-50 text-lg;
+    font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  }
 }
