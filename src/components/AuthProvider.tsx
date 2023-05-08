@@ -1,21 +1,10 @@
-import { FC, ReactNode, useEffect, useState } from "react";
-import { useUser } from "../hooks/useUser";
+import { FC, ReactNode } from "react";
 import { Navigate } from "react-router-dom";
+import { getUser } from "../utils/userActions";
 
 type Props = {
   children: ReactNode;
 };
 export const AuthProvider: FC<Props> = ({ children }) => {
-  const { user } = useUser();
-  const [redirect, setRedirect] = useState(false);
-
-  useEffect(() => {
-    if (!user) {
-      setRedirect(true);
-    } else {
-      setRedirect(false);
-    }
-  }, [user]);
-
-  return redirect ? <Navigate to="/" /> : <>{children}</>;
+  return !getUser() ? <Navigate to="/" /> : <>{children}</>;
 };
