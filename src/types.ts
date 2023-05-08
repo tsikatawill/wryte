@@ -1,8 +1,12 @@
+import { ReactNode } from "react";
+
 export type themeT = "dark" | "light";
 
 export type routeT = {
   name: string;
   href: string;
+  protectedRoute: boolean;
+  icon?: ReactNode;
 };
 
 export type postCategoryT =
@@ -18,7 +22,6 @@ export type postT = {
   image?: string;
   fullText: string;
   category: postCategoryT;
-  // dateCreated: Date;
   dateCreated: string;
 };
 
@@ -35,3 +38,10 @@ export type filterFncT = (
   filterBy: filterByT,
   filterValue: filterValueT
 ) => void;
+
+export type userT = {
+  id: string;
+  displayName: string;
+  email: string;
+  photoURL?: string;
+};
