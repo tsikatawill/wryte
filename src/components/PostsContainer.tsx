@@ -1,10 +1,10 @@
 import { Container, PostCard } from ".";
 import { FilterRow } from "./FilterRow";
 import { motion } from "framer-motion";
-import { useFilteredPosts } from "../hooks/useFilteredPosts";
+import { usePosts } from "../hooks/usePosts";
 
 export const PostsContainer = () => {
-  const { filterPosts, filteredPosts } = useFilteredPosts();
+  const { posts, filterPosts } = usePosts();
 
   return (
     <section className="py-10 md:py-16">
@@ -15,8 +15,8 @@ export const PostsContainer = () => {
           layout
           className="flex flex-wrap gap-10 justify-center"
         >
-          {filteredPosts.length > 0 ? (
-            filteredPosts.map((post) => (
+          {posts.length > 0 ? (
+            posts.map((post) => (
               <PostCard layoutId={post.id} {...post} key={post.id} />
             ))
           ) : (
