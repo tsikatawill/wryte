@@ -3,10 +3,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { CreatePost, EditPost, Error404, Login, Post, Posts } from "./pages";
 import App from "./App.tsx";
+import { AuthProvider } from "./components";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ToastContainer } from "react-toastify";
-import { AuthProvider } from "./components";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
