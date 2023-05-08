@@ -1,15 +1,16 @@
 import { DrawPathAnim, PathAppearAnim } from "../lib/animations";
+import { FC, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FC } from "react";
 
 type Props = {
-  parentRef: React.RefObject<HTMLElement>;
+  parentRef?: React.RefObject<HTMLElement>;
   type?: "small" | "large";
 };
 
 export const AnimatedPenHead: FC<Props> = ({ parentRef, type = "large" }) => {
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: parentRef,
+    target: parentRef || ref,
     offset: ["start start", "end center"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
