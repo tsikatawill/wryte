@@ -1,4 +1,4 @@
-import { Header, Newsletter, PostsContainer } from "./components";
+import { Footer, Header, Newsletter, PostsContainer } from "./components";
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <Header />
       <PostsContainer />
       <Newsletter />
+      <Footer />
     </>
   );
 }

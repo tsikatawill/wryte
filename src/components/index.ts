@@ -1,6 +1,7 @@
 export * from "./AnimatedPenHead.tsx";
 export * from "./Container.tsx";
 export * from "./Editor.tsx";
+export * from "./Footer";
 export * from "./Header.tsx";
 export * from "./Hero.tsx";
 export * from "./Layout.tsx";
