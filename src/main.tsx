@@ -1,7 +1,7 @@
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CreatePost, EditPost, Login, Post, Posts } from "./pages";
+import { CreatePost, EditPost, Error404, Login, Post, Posts } from "./pages";
 import App from "./App.tsx";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -18,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Route path="/posts/:title" element={<Post />} />
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/posts/edit-post/:id" element={<EditPost />} />
+        <Route path="/*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
