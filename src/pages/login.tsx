@@ -38,7 +38,7 @@ export const Login = () => {
   return (
     <Layout>
       <Container>
-        <div className="wrapper max-w-xl mx-auto bg-white dark:bg-slate-950 mt-10 p-5 md:p-10 shadow-lg shadow-[rgba(0,0,0,0.25)]">
+        <div className="wrapper max-w-xl mx-auto bg-white dark:bg-slate-950 my-10 p-5 md:p-10 shadow-lg shadow-[rgba(0,0,0,0.25)]">
           <AnimatedPenHead parentRef={ref} type="small" />
 
           <h1 className="text-center font-bold text-xl dark:text-white text-slate-500 md:text-3xl mb-5">

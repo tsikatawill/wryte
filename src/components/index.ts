@@ -1,4 +1,5 @@
 export * from "./AnimatedPenHead.tsx";
+export * from "./AuthProvider.tsx";
 export * from "./Container.tsx";
 export * from "./Editor.tsx";
 export * from "./Footer";
