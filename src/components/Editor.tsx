@@ -8,19 +8,21 @@ import ReactQuill from "react-quill";
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import { uploadImage } from "../utils/cloudinary";
-import { useNavigate } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 
 type Props = {
   handleSave: (post: postT) => void;
+  post?: postT;
 };
 
-export const Editor: FC<Props> = ({ handleSave }) => {
-  const [fullText, setFullText] = useState("");
-  const [title, setTitle] = useState("");
-  const [category, setCategory] = useState<postCategoryT>(POSTCATEGORIES[1]);
+export const Editor: FC<Props> = ({ handleSave, post }) => {
+  const [fullText, setFullText] = useState(post?.fullText || "");
+  const [title, setTitle] = useState(post?.title || "");
+  const [imageUrl, setImageUrl] = useState(post?.image || "");
+  const [category, setCategory] = useState<postCategoryT>(
+    post?.category || POSTCATEGORIES[1]
+  );
   const editorRef = useRef<ReactQuill>(null);
-  const navigate = useNavigate();
 
   const validatePost: () => boolean = () => {
     if (
@@ -39,6 +41,7 @@ export const Editor: FC<Props> = ({ handleSave }) => {
       // Update with logged in username
       author: "William M. Tsikata",
       title,
+      image: imageUrl,
       category: category as postCategoryT,
       fullText,
       id: uuid(),
@@ -47,8 +50,9 @@ export const Editor: FC<Props> = ({ handleSave }) => {
 
     if (validatePost()) {
       handleSave(post);
-      toast.success("Post created successfully");
-      navigate("/posts");
+      setFullText("");
+      setTitle("");
+      setImageUrl("");
     } else if (fullText === "") {
       toast.warn("Please type some text into the editor");
     } else {
@@ -70,7 +74,6 @@ export const Editor: FC<Props> = ({ handleSave }) => {
 
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "neqfirer");
 
       if (!editorRef.current) return;
       const range = editorRef.current.getEditorSelection();
@@ -108,9 +111,12 @@ export const Editor: FC<Props> = ({ handleSave }) => {
           onSubmit={handleSubmit}
           className="grid sm:grid-cols-4 gap-5 md:gap-8"
         >
-          <div className="input-group col-span-3">
-            <label htmlFor="title" className="font-semibold mb-2 block">
-              Post Title
+          <div className="input-group col-span-4">
+            <label
+              htmlFor="title"
+              className="font-semibold mb-2 block text-slate-600 dark:text-slate-300"
+            >
+              Title
             </label>
             <input
               required
@@ -124,9 +130,44 @@ export const Editor: FC<Props> = ({ handleSave }) => {
             />
           </div>
 
-          <div className="input-group">
-            <label htmlFor="category" className="font-semibold mb-2 block">
-              Post Category
+          <div className="input-group col-span-2">
+            <label
+              htmlFor="image"
+              className="font-semibold mb-2 block text-slate-600 dark:text-slate-300"
+            >
+              Image
+            </label>
+            <input
+              type="file"
+              id="image"
+              accept="image/*"
+              onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                if (!e.target.files) return;
+                const file = e.target.files[0];
+
+                const formData = new FormData();
+                formData.append("file", file);
+
+                uploadImage(formData)
+                  .then((url) => {
+                    toast.success("Image saved");
+                    setImageUrl(url);
+                  })
+                  .catch(() => {
+                    toast.error("Image not uploaded");
+                  });
+              }}
+              placeholder="Type post title"
+              className="input"
+            />
+          </div>
+
+          <div className="input-group col-span-2">
+            <label
+              htmlFor="category"
+              className="font-semibold mb-2 block text-slate-600 dark:text-slate-300"
+            >
+              Category
             </label>
             <select
               id="category"
@@ -145,6 +186,16 @@ export const Editor: FC<Props> = ({ handleSave }) => {
             </select>
           </div>
 
+          {imageUrl && (
+            <div className="image-wrapper col-span-4">
+              <img
+                src={imageUrl}
+                alt={title}
+                className="w-full max-h-96 md:max-h-[40rem] h-full object-cover"
+              />
+            </div>
+          )}
+
           <div className="quill-wrapper w-full col-span-4">
             <ReactQuill
               ref={editorRef}
@@ -155,9 +206,7 @@ export const Editor: FC<Props> = ({ handleSave }) => {
             />
           </div>
 
-          <button className="block col-start-2 col-span-2 outline-blue-500 focus:outline border-none w-full bg-cyan-800 hover:bg-cyan-600 duration-200 transition-all ease-out  px-2 h-10">
-            Save post
-          </button>
+          <button className="submit">Save post</button>
         </form>
       </div>
     </Container>
