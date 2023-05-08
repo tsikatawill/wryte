@@ -4,14 +4,19 @@ import { FC } from "react";
 
 type Props = {
   parentRef: React.RefObject<HTMLElement>;
+  type?: "small" | "large";
 };
 
-export const AnimatedPenHead: FC<Props> = ({ parentRef }) => {
+export const AnimatedPenHead: FC<Props> = ({ parentRef, type = "large" }) => {
   const { scrollYProgress } = useScroll({
     target: parentRef,
     offset: ["start start", "end center"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
+
+  const largeStyles = "w-64 sm:w-80 md:w-full m-auto";
+  const smallStyles = "w-32 md:w-52 mx-auto";
+
   return (
     <motion.svg
       style={{ scale }}
@@ -19,7 +24,7 @@ export const AnimatedPenHead: FC<Props> = ({ parentRef }) => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
-      className="w-64 sm:w-80 md:w-full m-auto"
+      className={type === "large" ? largeStyles : smallStyles}
     >
       <g id="pen">
         <motion.path
