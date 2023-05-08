@@ -18,7 +18,7 @@
   }
 
   .submit {
-    @apply block col-start-2 col-span-2 outline-blue-500 focus:outline border-none w-full bg-cyan-800 hover:bg-cyan-600 duration-200 text-white transition-all ease-out  px-2 h-10;
+    @apply block col-start-2 col-span-2 outline-blue-500 focus:outline border-none w-full bg-cyan-800 hover:bg-cyan-900 duration-200 text-white transition-all ease-out px-2 h-10;
   }
 }
 
