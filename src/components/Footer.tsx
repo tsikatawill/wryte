@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="py-10 md:py-20 bg-black">
+    <footer className="py-10 bg-black">
       <p className="text-center">
         Developed with ❤️‍🔥 by{" "}
         <Link
