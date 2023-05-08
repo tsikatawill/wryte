@@ -4,9 +4,8 @@ import { MotionProps, motion } from "framer-motion";
 import { FC } from "react";
 import { PostCategoryIcon } from ".";
 import { postT } from "../types";
-import { toast } from "react-toastify";
-import { useUser } from "../hooks/useUser";
 import { usePosts } from "../hooks/usePosts";
+import { useUser } from "../hooks/useUser";
 
 type Props = postT & MotionProps;
 
