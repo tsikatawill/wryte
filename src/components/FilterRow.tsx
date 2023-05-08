@@ -6,7 +6,7 @@ import {
   postCategoryT,
 } from "../types";
 import { POSTCATEGORIES } from "../lib/postCategories";
-import { POSTS } from "../lib/posts";
+import { usePosts } from "../hooks/usePosts";
 
 type Props = {
   handleFilter(filterBy: filterByT, filterValue: filterValueT): void;
@@ -20,8 +20,9 @@ export const FilterRow: FC<Props> = ({ handleFilter }) => {
   };
   const [formData, setFormData] = useState<filterFormDataT>(emptyFormData);
   const [showAuthors, setShowAuthors] = useState<boolean>(false);
+  const { posts } = usePosts();
 
-  const AUTHORS = POSTS.map((item) => item.author);
+  const AUTHORS = [...new Set(posts.map((item) => item.author))];
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
