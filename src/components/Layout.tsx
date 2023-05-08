@@ -7,10 +7,11 @@ type Props = {
 
 export const Layout: FC<Props> = ({ children }) => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      {children}
+
+      <div className="mb-auto">{children}</div>
       <Footer />
-    </>
+    </div>
   );
 };
